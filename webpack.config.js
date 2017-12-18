@@ -1,16 +1,12 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var config = {
-    entry: {
-        main: './main'
-    },
+    entry: __dirname + '/main.js',
     output: {
-        path: __dirname + './dist',
-        publicPath: '/dist/',
-        filename: 'main.js'
+        path: __dirname + '/dist',
+        filename: 'bundle.js'
     },
     devServer: {
-      contentBase: './dist',  
-      compress: true,
+      contentBase: '/dist',  
       port:3000,
       inline: true,
       historyApiFallback: true
