@@ -6,10 +6,11 @@ var config = {
         filename: 'bundle.js'
     },
     devServer: {
-      contentBase: '/dist',  
-      port:3000,
-      inline: true,
-      historyApiFallback: true
+        contentBase: '/',
+        port: 3000,
+        inline: true,
+        historyApiFallback: true,
+        hot:true
     },
     module: {
         rules: [
@@ -43,12 +44,19 @@ var config = {
             }
         ]
     },
+    
     plugins: [
         new ExtractTextPlugin({
             filename: '[name].css',
-            allChunks:true
+            allChunks: true
         })
-    ]
+    ],
+    resolve: {
+        extensions: ['.js', '.jsx'],
+        alias: {
+            'vue': 'vue/dist/vue.js'
+        }
+    },
 };
 
 module.exports = config;
