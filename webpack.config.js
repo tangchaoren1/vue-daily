@@ -54,7 +54,7 @@ var config = {
             filename: '[name].css',
             allChunks: true
         }),
-        new HtmlWebpackPlugin({template: './dist/index.html'})
+        new HtmlWebpackPlugin({template: './index.html'})
     ],
     resolve: {
         extensions: ['.js', '.jsx'],

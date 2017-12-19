@@ -1,6 +1,6 @@
 <template>
   <div class="daily-menu">
-      <div class="deily-menu-item">123sxsx</div>
+      <div class="deily-menu-item">123xzxx</div>
   </div>
 </template>
 
