@@ -1,4 +1,5 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path')
 var config = {
     entry: __dirname + '/main.js',
     output: {
@@ -6,7 +7,6 @@ var config = {
         filename: 'bundle.js'
     },
     devServer: {
-        contentBase: '/',
         port: 3000,
         inline: true,
         historyApiFallback: true,
