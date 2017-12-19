@@ -11476,10 +11476,14 @@ module.exports = Component.exports
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "daily-menu"
-  }, [_vm._v("123")])
-},staticRenderFns: []}
+  }, [_c('div', {
+    staticClass: "deily-menu-item"
+  }, [_vm._v("123")])])
+}]}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()

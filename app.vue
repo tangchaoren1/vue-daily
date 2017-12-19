@@ -1,5 +1,7 @@
 <template>
-  <div class="daily-menu">6666==</div>
+  <div class="daily-menu">
+      <div class="deily-menu-item">123xsxsx</div>
+  </div>
 </template>
 
 <script>

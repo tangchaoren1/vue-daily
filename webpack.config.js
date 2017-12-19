@@ -1,5 +1,7 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var webpack = require('webpack');
 const path = require('path')
+
 var config = {
     entry: __dirname + '/main.js',
     output: {
@@ -7,10 +9,11 @@ var config = {
         filename: 'bundle.js'
     },
     devServer: {
-        port: 3000,
-        inline: true,
-        historyApiFallback: true,
-        hot:true
+        contentBase:__dirname + '/dist',
+        port: 3001,
+        hot:true,
+        inline:true,
+        historyApiFallback: true
     },
     module: {
         rules: [
