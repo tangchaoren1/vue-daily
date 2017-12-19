@@ -11,17 +11,19 @@ a {
     text-decoration: none;
 }
 
-.daily-menu>ul>li {
+.deily-menu-item {
     list-style: none;
 }
 
 .daily-menu>ul>li>a {
     display: block;
     color: black;
+    width: 120px;
+    height: 40px;
     line-height: 40px;
     text-align: center;
-    border-radius: 4px;
     margin-bottom: 2px;
+    border-radius: 5px;
 }
 
 .daily-menu {
@@ -29,12 +31,12 @@ a {
     width: 120px;
 }
 
-.deily-menu-item {
-    width: 120px;
-    height: 40px;
+.deily-menu-item>a:hover {
+    background: #ed4040;
+    color: #fff !important;
 }
 
 .active {
     background: #ed4040;
-    color: #fff;
+    color: #fff !important;
 }
