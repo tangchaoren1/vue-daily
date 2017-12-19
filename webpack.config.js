@@ -1,4 +1,5 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 var webpack = require('webpack');
 const path = require('path')
 
@@ -52,7 +53,8 @@ var config = {
         new ExtractTextPlugin({
             filename: '[name].css',
             allChunks: true
-        })
+        }),
+        new HtmlWebpackPlugin({template: './dist/index.html'})
     ],
     resolve: {
         extensions: ['.js', '.jsx'],
