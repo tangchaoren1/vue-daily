@@ -10,21 +10,20 @@ var config = {
         filename: 'bundle.js'
     },
     devServer: {
-        contentBase:__dirname + '/dist',
+        contentBase: __dirname + '/dist',
         port: 3001,
-        hot:true,
-        inline:true,
+        hot: true,
+        inline: true,
         historyApiFallback: true
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.vue$/,
                 loader: 'vue-loader',
                 options: {
                     loaders: {
                         css: ExtractTextPlugin.extract({
-                            use: 'css-loader',//将资源转换成一个输出的模块
+                            use: 'css-loader', //将资源转换成一个输出的模块
                             fallback: 'vue-style-loader'
                         })
                     }
@@ -48,13 +47,13 @@ var config = {
             }
         ]
     },
-    
+
     plugins: [
         new ExtractTextPlugin({
             filename: '[name].css',
             allChunks: true
         }),
-        new HtmlWebpackPlugin({template: './index.html'})
+        new HtmlWebpackPlugin({ template: './index.html' })
     ],
     resolve: {
         extensions: ['.js', '.jsx'],
@@ -62,6 +61,7 @@ var config = {
             'vue': 'vue/dist/vue.js'
         }
     },
+    devtool: "#eval-source-map"
 };
 
 module.exports = config;

@@ -1,8 +1,40 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  color: #657180;
-  font-size:16px;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: #657180;
+    font-size: 16px;
 }
 
+a {
+    text-decoration: none;
+}
+
+.daily-menu>ul>li {
+    list-style: none;
+}
+
+.daily-menu>ul>li>a {
+    display: block;
+    color: black;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 4px;
+    margin-bottom: 2px;
+}
+
+.daily-menu {
+    height: 600px;
+    width: 120px;
+}
+
+.deily-menu-item {
+    width: 120px;
+    height: 40px;
+}
+
+.active {
+    background: #ed4040;
+    color: #fff;
+}
