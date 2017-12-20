@@ -34,7 +34,7 @@
                     @click.native="handleClick(item.id)"></Item>
             </template>
         </div>
-        <daily-article :id="articleId"></daily-article>
+        <daily-article :id="articleId" ref='dailyArticle'></daily-article>
     </div>
 
 </template>
@@ -55,7 +55,8 @@ export default {
       list: [],
       themeId: 0,
       articleId: 0,
-      isLoading: false
+      isLoading: false,
+      clickRecommand:false
     };
   },
   methods: {
@@ -64,6 +65,8 @@ export default {
       this.recommendList = [];
       this.dailyTime = $.getTodayTime();
       this.getRecommendList();
+      this.$refs.dailyArticle.comments = [];
+      this.$refs.dailyArticle.data = [];
     },
     handleToTheme(id) {
       this.type = "daily";
@@ -81,12 +84,12 @@ export default {
     getRecommendList() {
       this.isLoading = true;
       const prevDay = $.prevDay(this.dailyTime + 86400000);
-      $.ajax.get("news/before/" + prevDay).then(res => {
+      $.ajax.get("news/before/" + prevDay).then((res,err) => {
         this.recommendList.push(res);
         this.isLoading = false;
       }).catch(err=>{
           console.log(err)
-      });
+      })
     },
     formatDay(date) {
       let month = date.substr(4, 2);
