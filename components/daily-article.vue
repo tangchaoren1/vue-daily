@@ -9,9 +9,9 @@
                     <img :src="comment.avatar">
                 </div>
                 <div class="daily-comment-content">
-                    <div class="daily-comment-name">{{ comment.author }}</div>
-                    <div class="daily-comment-time" v-time="comment.time"></div>
-                    <div class="daily-comment-text">{{ comment.content }}</div>
+                    <div>{{ comment.author }}</div>
+                    <div  v-time="comment.time"></div>
+                    <div>{{ comment.content }}</div>
                 </div>
             </div>
         </div>

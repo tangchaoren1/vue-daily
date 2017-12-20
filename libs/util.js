@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const Util = {
-    imgPath: 'http://127.0.0.1:8011/img/',
-    apiPath: 'http://127.0.0.1:8010/'
+    imgPath: 'http://127.0.0.1:3004/img/',
+    apiPath: 'http://127.0.0.1:3003/'
 };
 
 // 获取今天时间戳
