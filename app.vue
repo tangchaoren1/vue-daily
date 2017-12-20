@@ -19,6 +19,9 @@
 </template>
 
 <script>
+import Item from "./components/item.vue";
+import dailyArticle from './components/daily-article.vue';
+import $ from './libs/util';
 export default {
   data(){
       return {
@@ -30,7 +33,8 @@ export default {
       handleToRecommend(){
           this.type = 'recommand';
           this.recommendList = [];
-
+          this.dailyTime = $.getTodayTime();
+          this.getRecommendList();
       }
   }
 }
