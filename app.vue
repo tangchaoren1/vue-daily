@@ -56,7 +56,6 @@ export default {
       themeId: 0,
       articleId: 0,
       isLoading: false,
-      clickRecommand:false
     };
   },
   methods: {

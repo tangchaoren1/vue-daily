@@ -25,7 +25,7 @@ Util.prevDay = function(timestamp = (new Date()).getTime()) {
     const day = date.getDate() < 10 ?
         '0' + date.getDate() :
         date.getDate();
-    return year + month + day;
+    return year + '年' + month + '月' + day + '日';
 };
 
 // Ajax 通用配置
