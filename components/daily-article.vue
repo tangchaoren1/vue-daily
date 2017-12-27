@@ -50,7 +50,7 @@
                 this.comments = [];
                 $.ajax.get('story/' + this.id + '/short-comments').then(res => {
                     this.comments = res.comments.map(comment => {
-                        // 转为代理地址
+                        // 将头像的图片地址转为代理地址
                         comment.avatar = $.imgPath + comment.avatar;
                         return comment;
                     });
