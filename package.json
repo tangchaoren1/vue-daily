@@ -38,6 +38,7 @@
     },
     "dependencies": {
         "axios": "^0.16.1",
+        "iview": "^2.8.0",
         "vue": "^2.2.6"
     },
     "bugs": {

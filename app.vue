@@ -42,9 +42,10 @@
 <script>
 import Item from "./components/item.vue";
 import dailyArticle from "./components/daily-article.vue";
+import Active from'./components/active.vue';
 import $ from "./libs/util";
 export default {
-  components: { Item, dailyArticle },
+  components: { Item, dailyArticle,Active },
   data() {
     return {
       themes: [],
