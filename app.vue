@@ -1,5 +1,9 @@
 <template>
   <div class="daily">
+    <div class="daily-menu-item">
+                <router-link to='/local'>本地生活</router-link>
+                <router-view></router-view>
+    </div>
         <div class="daily-menu">
             <div class="daily-menu-item"
                  @click="handleToRecommend"
@@ -14,6 +18,7 @@
                         @click="handleToTheme(item.id)">{{ item.name }}</a>
                 </li>
             </ul>
+            
         </div>
         <div class="daily-list" ref="list">
             <template v-if="type === 'recommend'">
@@ -34,7 +39,12 @@
                     @click.native="handleClick(item.id)"></Item>
             </template>
         </div>
-        <daily-article :id="articleId" ref='dailyArticle'></daily-article>
+        <daily-article :id="articleId" ref='dailyArticle'> </daily-article>
+
+        
+       
+       
+        
     </div>
 
 </template>
