@@ -8,9 +8,9 @@ Vue.use(VueRouter);
 const routes = [
     {path: '/local', component: local, 
     children:[
-       {path:'view', component: view1},
-       {path:'view2', component: view2},
-       {path:'view3', component: view3}
+       {name:'nav1', path:'view', component: view1 },
+       {name:'nav2', path:'view2', component: view2},
+       {name:'nav3', path:'view3', component: view3}
     ]}
 ]
 export const router = new VueRouter({
