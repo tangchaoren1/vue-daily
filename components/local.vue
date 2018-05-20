@@ -1,20 +1,23 @@
 <template>
    <div>
-      这里是本地生活的新闻
-      <a @click="handleClick('nav1')">子导航1</a>
-      <a @click="handleClick('nav2')">子导航2</a>
-      <a @click="handleClick('nav3')">子导航3</a>
-      <router-view></router-view>
+     
    </div>
 </template>
 <script>
+import $ from "../libs/util";
+import tadayNewsVue from './tadayNews.vue';
 export default {
+ mounted(){
+    this.getData()
+ },
   methods:{
-      handleClick(name){
-         this.$router.push({name})
+      getData(){
+        console.log(123)
+          $.ajax.get('/news').then((res) => {
+            console.log(res)
+          })
       }
   }
-
 }
 </script>
 

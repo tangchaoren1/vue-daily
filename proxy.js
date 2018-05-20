@@ -8,6 +8,7 @@ const imgPort = 3004;
 // 创建一个 API 代理服务
 const apiServer = http.createServer((req, res) => {
     const url = 'http://news-at.zhihu.com/api/4' + req.url;
+    console.log(req.url);
     const options = {
         url: url
     };

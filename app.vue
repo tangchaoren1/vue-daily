@@ -1,7 +1,6 @@
 <template>
   <div class="daily">
     <div class="daily-menu-item">
-                <router-link to='/local'>本地生活</router-link>
                 <router-view></router-view>
     </div>
         <div class="daily-menu">
@@ -18,7 +17,10 @@
                         @click="handleToTheme(item.id)">{{ item.name }}</a>
                 </li>
             </ul>
-            
+            <div class="daily-menu-item"
+                 @click="getTadayNews('tadayNews')"
+                   >今日快讯
+                   </div>
         </div>
         <div class="daily-list" ref="list">
             <template v-if="type === 'recommend'">
@@ -95,6 +97,12 @@ export default {
       }).catch(err=>{
           console.log(err)
       })
+    },
+    getTadayNews(name){
+      this.$router.push({name})
+      //  $.ajax.get("news/before/" + prevDay).then((res,err) =>{
+
+      //  })  
     },
     formatDay(date) {
       let month = date.substr(4, 2);
