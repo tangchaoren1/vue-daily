@@ -7,8 +7,10 @@ const imgPort = 3004;
 
 // 创建一个 API 代理服务
 const apiServer = http.createServer((req, res) => {
-    const url = 'http://news-at.zhihu.com/api/4' + req.url;
-    console.log(req.url);
+    let url = 'http://news-at.zhihu.com/api/4' + req.url;
+    if(req.url == '/news'){
+        url = 'http://music.163.com' + req.url;
+    }
     const options = {
         url: url
     };
@@ -21,6 +23,7 @@ const apiServer = http.createServer((req, res) => {
             res.setHeader('Access-Control-Allow-Origin', '*');
             // 返回代理后的内容
             res.end(body);
+            console.log(body)
         }
     }
     request.get(options, callback);

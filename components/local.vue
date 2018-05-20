@@ -13,7 +13,7 @@ export default {
   methods:{
       getData(){
         console.log(123)
-          $.ajax.get('/news').then((res) => {
+          $.ajax.get('/api/search/suggest/web').then((res) => {
             console.log(res)
           })
       }
