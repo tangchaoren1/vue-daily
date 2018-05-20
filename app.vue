@@ -40,11 +40,6 @@
             </template>
         </div>
         <daily-article :id="articleId" ref='dailyArticle'> </daily-article>
-
-        
-       
-       
-        
     </div>
 
 </template>
