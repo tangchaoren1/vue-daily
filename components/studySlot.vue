@@ -1,7 +1,9 @@
 <template>
     <div>
         这里是一个插槽内容
-        <slot></slot>
+        <slot name='green'></slot>
+        <hr>
+        <slot name='red'></slot>
     </div>
 </template>
 <script>

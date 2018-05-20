@@ -2,11 +2,8 @@
   <div>
       我是一个子导航
     <study-slot>
-      <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-      </ul>
+      <span slot="green">这个是具名的green slot</span>
+      <span slot="red">这个是具名的red slot</span>
     </study-slot>
   </div>
 </template>
