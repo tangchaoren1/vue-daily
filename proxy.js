@@ -23,7 +23,6 @@ const apiServer = http.createServer((req, res) => {
             res.setHeader('Access-Control-Allow-Origin', '*');
             // 返回代理后的内容
             res.end(body);
-            console.log(body)
         }
     }
     request.get(options, callback);
