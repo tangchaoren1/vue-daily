@@ -2,7 +2,7 @@
    <div>
        这个页面用来练习store
        <span>{{user}}</span>
-       <span>快看，我是会变的哦{{num}}</span>
+       <span>快看，我是会变的哦~bui {{num}}</span>
        <button @click='counter'>点我呀</button>
    </div>
 </template>

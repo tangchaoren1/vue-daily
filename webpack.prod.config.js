@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var clearDist = require('clean-webpack-plugin');
 var merge = require('webpack-merge');
 var webpackBaseConfig = require('./webpack.config.js');
 
@@ -14,6 +15,14 @@ module.exports = merge(webpackBaseConfig, {
         filename: '[name].[hash].js'
     },
     plugins: [
+        new clearDist(['dist']),
+        new webpack.HashedModuleIdsPlugin(),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendor'
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'manifest'
+        }),
         new ExtractTextPlugin({
             // 提取 css，并重命名为带有 20 位 hash 值的唯一文件
             filename: '[name].[hash].css',
